@@ -1,0 +1,2 @@
+# stockr
+Stock sentiment analysis
