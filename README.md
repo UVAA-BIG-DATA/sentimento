@@ -1,2 +1,2 @@
-# stockr
-Stock sentiment analysis
+# Sentimento
+Stock sentiment analysis by team UVAA
