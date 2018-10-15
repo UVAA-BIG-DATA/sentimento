@@ -4,7 +4,8 @@ datatype: csv
 interval: 60min
 company:
   - MSFT
-  - AAPL
   - GOOGL
   - FB
   - AMZN
+  - SNAP
+  - NFLX

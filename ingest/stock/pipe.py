@@ -20,7 +20,7 @@ class Pipe:
 
     def write_to_file(self, path=os.getcwd(), filename='default', ext='csv'):
         self.raise_error()
-        path = path + '/' + filename + '.' + ext
+        path = path + '/__data__/' + filename + '.' + ext
         if not os.path.isfile(path):
             with open(path, 'w') as f:
                 f.write(self.text[0])
