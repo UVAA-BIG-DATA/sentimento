@@ -1,0 +1,11 @@
+---
+
+datatype: csv
+interval: 60min
+company:
+  - MSFT
+  - GOOGL
+  - FB
+  - AMZN
+  - SNAP
+  - NFLX
