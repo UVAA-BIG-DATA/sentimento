@@ -1,7 +1,7 @@
 ---
 
 datatype: csv
-interval: 60min
+interval: 5min
 company:
   - MSFT
   - GOOGL
