@@ -2,3 +2,4 @@
 **/__pycache__/
 ingest/stock/__data__/*.csv
 .vscode/*
+**/.ipynb_checkpoints/*

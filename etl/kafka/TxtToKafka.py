@@ -3,7 +3,7 @@ import time
 
 startTime = time.time()
 
-cleansedFile = open("cleansedData.txt", "r")
+cleansedFile = open("../../ingest/twitter/cleansedData.txt", "r")
 producer = KafkaProducer(bootstrap_servers='localhost:9092')  # 9092
 x = 0
 
@@ -13,4 +13,4 @@ for jsonLine in cleansedFile:
 
 cleansedFile.close()
 
-print (time.time() - startTime)
+print(time.time() - startTime)
