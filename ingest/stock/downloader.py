@@ -4,10 +4,14 @@ import requests
 class Downloader:
     """download stock data from alphavantage.co"""
 
-    def __init__(self, url='https://www.alphavantage.co/query', params={}):
+    def __init__(self, url='https://www.alphavantage.co/query'):
         self.url = url
-        self.payload = params
         self.session = requests.Session()
+        self.params = {}
+
+    def addParams(self, params={}):
+        self.payload = params
+        return self
 
     def stream(self):
         self.payload['outputsize'] = 'compact'
@@ -21,3 +25,7 @@ class Downloader:
 
     def close(self):
         self.session.close()
+
+    def raise_error(self):
+        if self.params == {}:
+            raise AttributeError("Downloader object has no attribute 'params'")
