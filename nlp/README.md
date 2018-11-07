@@ -1,4 +1,4 @@
 # Natural Language Processing
 
-- Tensorflow
-- Stanford NLP
+- Textblob
+- Jupyter Notebook
