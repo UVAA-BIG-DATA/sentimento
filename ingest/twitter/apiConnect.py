@@ -23,7 +23,11 @@ class StreamListener(tweepy.StreamListener):
     def on_status(self, status):
         if status.lang == "en" and status.truncated is False:
             file_raw.write(json.dumps(status._json) + '\n')
-            c = CleansedData(str(status.created_at), status.text, status.user.followers_count, status.timestamp_ms)
+            c = CleansedData(
+                str(status.created_at),
+                status.text,
+                status.user.followers_count,
+                status.timestamp_ms)
             file_cleansed.write(json.dumps(c.__dict__) + '\n')
 
     def on_error(self, status_code):
