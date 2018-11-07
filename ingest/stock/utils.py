@@ -1,15 +1,22 @@
 def dedup(text):
     if isinstance(text, list) is False:
         text = text.split('\n')
-    final_list = []
-    for line in text[:]:
-        if line not in final_list:
-            final_list.append(line)
-    return final_list
+    return list(set(text))
 
 
 def clean(text):
     if isinstance(text, list) is False:
         text = text.split('\n')
-    text = filter(lambda line: '{' not in line and '}' not in line, text)
-    return list(text)
+    text = filter(lambda line: 'Information' not in line and '{' not in line, text)
+    return [line.strip() for line in list(text)]
+
+
+def sort(text):
+    if isinstance(text, list) is False:
+        text = text.split('\n')
+
+
+def appendCol(text, colname=''):
+    if isinstance(text, list) is False:
+        text = text.split('\n')
+    return ['%s,%s' % (colname, line) for line in text[:]]
