@@ -5,8 +5,8 @@ auth = tweepy.OAuthHandler("Xu5IorVffkaHxQgnfSwGYnOP9", "ktqNLYXvZ3A3KeB0yzzjvPi
 auth.set_access_token("1045529018429308928-ETyP95yPXQxZcniQEa4QSVbCJgihqZ", "wW9ZWd9sictuTr75xQpet2iqDsDX0VqCPAUlWfNy3KevT")
 api = tweepy.API(auth)
 
-file_raw = open("rawTweet.txt", "a")
-file_cleansed = open("cleansedData.txt", "a")
+file_raw = open("__data__/rawTweet.txt", "a")
+file_cleansed = open("__data__/cleansedData.txt", "a")
 
 
 class CleansedData:
@@ -35,6 +35,7 @@ class StreamListener(tweepy.StreamListener):
             return False
 
 
-stream_listener = StreamListener()
-stream = tweepy.Stream(auth=api.auth, listener=stream_listener)
-stream.filter(track=["Amazon", "Facebook", "Netflix", "Microsoft", "Google", "Snapchat"])
+if __name__ == '__main__':
+    stream_listener = StreamListener()
+    stream = tweepy.Stream(auth=api.auth, listener=stream_listener)
+    stream.filter(track=["Amazon", "Facebook", "Netflix", "Microsoft", "Google", "Snapchat"])

@@ -1,8 +1,25 @@
 # Sentimento
 
-Stock sentiment analysis by team UVAA
+Stock sentiment analysis project, correlate stock behaviors and tweet sentiments.
 
-## Setup
+## Getting Started
+
+This project only provides a single node deployment method guidance using `docker-compose`, users may also use bootstrap script to customize their own builds in cluster environments.
+
+make sure you install Docker (version >= 18) and run the following command to bootstrap Sentimento in your computer:
+
+```
+docker-compose up
+```
+
+### System requirements
+
+> System: Mac OSX (10.12.6) Sierra or higher \
+> Storage: 16GB RAM, 100GB+ Disk space
+
+Note: This project requires the machine to have at least 16GB of RAM and more than 100GB of disk storage to fully operate. If not so, the data is insufficient to provide a more accurate result.
+
+### Development Setup
 
 > Make sure for each module, use the specific Python version noted in `.python-version`
 
@@ -35,3 +52,13 @@ To work with existing modules:
 - activate your `venv` and run `pip install -r requirements.txt` to install dependencies for that module
 
 - deactivate as above
+
+## Example insights
+
+In Zeppelin dashboard, an example of a stock price movement versus the average sentiment values of relevant tweets, Facebook (symbol: FB) share has relative higher price with more positive sentiments while lower price with more negative sentiments.
+
+![img](./stock-vs-sa.png)
+
+## License
+
+Copyright &copy; 2018, Sentimento is licensed under [MIT](https://opensource.org/licenses/MIT).

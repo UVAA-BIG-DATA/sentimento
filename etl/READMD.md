@@ -1,4 +1,10 @@
 # ETL Layer
 
-- Spark RDD, Spark Streaming
-- Kafka
+- Spark SQL
+- Kafka to Cassandra persistence
+
+## Launching Spark Container
+
+```
+sh spark/bootstrap.sh
+```
