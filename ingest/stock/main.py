@@ -3,13 +3,12 @@ import getopt
 import yaml
 from downloader import Downloader
 from pipe import Pipe
-from producer import produce
 from utils import dedup, clean, appendCol
 
 
 def loadConfig():
     yml = ''
-    with open('../company.yaml', 'r') as f:
+    with open('company.yaml', 'r') as f:
         yml = f.read()
     return yaml.load(yml)
 
