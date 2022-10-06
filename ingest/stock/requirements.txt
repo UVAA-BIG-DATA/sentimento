@@ -2,7 +2,7 @@ autopep8==1.4
 certifi==2018.8.24
 chardet==3.0.4
 Click==7.0
-dparse==0.4.1
+dparse==0.5.2
 idna==2.7
 kafka-python==1.4.3
 numpy==1.15.2
